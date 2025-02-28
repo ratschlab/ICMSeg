@@ -1,0 +1,4 @@
+training_domains: VerSe_contrast
+dataset_style: VerSe_mri
+val_domains: VerSe
+test_domains: MRSpineSegV

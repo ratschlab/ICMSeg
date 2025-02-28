@@ -1,0 +1,15 @@
+defaults:
+  - paths: shared
+  - dataset: lumbarspine
+  - method: unet
+  - experiment: verse_style_contrast
+
+project_name: ICMSeg
+run_type: train
+seed: 0
+check_val_every_n_epoch: 5
+val_check_interval: 1.0
+log_every_n_steps: 100
+# precision: 16-mixed
+num_workers: 4
+depth_test: 1
