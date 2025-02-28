@@ -1,0 +1,3 @@
+[submodule "diff-aug"]
+	path = diff-aug
+	url = https://github.com/prs-eth/DGInStyle
