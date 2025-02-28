@@ -1,7 +1,9 @@
 # Generalizable Single-Source Cross-modality Medical Image Segmentation via Invariant Causal Mechanisms
 
-## Overview
-This repository contains the implementation of a segmentation method using **VERSE Style Contrast** for the **Lumbar Spine** dataset. The model is trained and tested using the `main.py` script with specific command-line arguments.
+## Abstract
+Single-source domain generalization (SDG) aims to learn a model from a single source domain that can generalize well on unseen target domains. This is an important task in computer vision, particularly relevant to medical imaging where domain shifts are common. In this work, we consider a challenging yet practical setting: SDG for cross-modality medical image segmentation. We combine causality-inspired theoretical insights on learning domain-invariant representations with recent advancements in diffusion-based augmentation to improve generalization across diverse imaging modalities. Guided by the ``intervention-augmentation equivariant'' principle, we use controlled diffusion models (DMs) to simulate diverse imaging styles while preserving the content, leveraging rich generative priors in large-scale pretrained DMs to comprehensively perturb the multidimensional style variable. Extensive experiments on challenging cross-modality segmentation tasks demonstrate that our approach consistently outperforms state-of-the-art SDG methods across three distinct anatomies and imaging modalities.
+
+![Model Overview](figs/overview.pdf)
 
 ## Installation
 
@@ -19,7 +21,7 @@ This repository includes a diffusion augmentation module that follows the implem
 ## Dataset structure
 We train on 2D slices extracted from 3D volumes. We provide an example of using the VerSe dataset as the source domain and MRSPineSegV as the target domain. Since the inference for the diffusion model is slow, we precompute the style-intervened images instead of computing them on-the-fly during training, at the cost of style intervention diversity. For simplicity, we consider only one set of style-intervened images, while the style sets can be arbitrary. 
 
-There should be two folders of source images, VerSe and VerSe_mri. 
+There should be two folders of source images, VerSe and VerSe_mri (i.e., the style-intervened images from the diffusion-based augmentation). 
 
 The folder structure of VerSe is as follows:
 ```
