@@ -88,7 +88,7 @@ The script uses Hydra for configuration management. You can customize the traini
 
 ## Citation
 ```
-@@inproceedings{chen2024generalizable,
+@inproceedings{chen2024generalizable,
   title={Generalizable Single-Source Cross-modality Medical Image Segmentation via Invariant Causal Mechanisms},
   author={Chen, Boqi and Zhu, Yuanzhi and Ao, Yunke and Caprara, Sebastiano and Sutter, Reto and R{"a}tsch, Gunnar and Konukoglu, Ender and Susmelj, Anna},
   booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision},
